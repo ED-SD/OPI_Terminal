@@ -100,13 +100,13 @@ data class CardRequest(
     @Root(name = "OriginalTransaction")
     data class OriginalTransaction constructor(
 
-        @field:Element(name = "TerminalID", required = false)
+        @field:Attribute(name = "TerminalID", required = false)
         var terminalID: String? = null,
 
         @field:Element(name = "TerminalBatch", required = false)
         var terminalBatch: String? = null,
 
-        @field:Element(name = "STAN", required = false)
+        @field:Attribute(name = "STAN", required = false)
         var STAN: String? = null,
 
         @field:Element(name = "TimeStamp", required = false)

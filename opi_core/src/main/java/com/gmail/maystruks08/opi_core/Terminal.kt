@@ -143,6 +143,13 @@ class Terminal(
                 paymentAmount = originalTransaction.total.toString(),
                 currency = originalTransaction.currency
             ),
+            posData = CardRequest.PosData(
+                posTimeStamp = Date().toServerUTCFormat(),
+                usePreselectedCard = false
+            ),
+            privateData = CardRequest.PrivateData(
+                lastReceiptNumber = "-1"
+            ),
             originalTransaction = originalTransaction.let {
                 CardRequest.OriginalTransaction(
                     terminalID = it.terminalID,

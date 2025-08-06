@@ -12,5 +12,6 @@ enum class OperationResult {
     ValidationError,
     MissingMandatoryData,
     Loggedout,
-    Busy
+    Busy,
+    UnknownCard
 }
